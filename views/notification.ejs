@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notifications</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/iconfont/material-icons.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <!-- style for sign up page -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- style for sign up page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Page Layout here -->
+  <div class="navbar-fixed">
+    <nav class="blue darken-4" id="secondnav">
+      <div class="container ">
+        <div class="nav-wrapper">
+          <a href="#Home" class="brand-logo deep-purple-text ">
+
+            <b>
+              <span class="white-text ">Notifications
+            </b>
+            </span>
+            </b>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="/home">
+                <b>Home</b>
+              </a>
+            </li>
+            <li>
+              <a href="/portal">
+                <b>Portal</b>
+              </a>
+            </li>
+
+            <li>
+              <a href="/blog">
+                <b>Blog</b>
+              </a>
+            </li>
+
+            <li>
+              <a href="/baserooms">
+                <b>Baserooms</b>
+              </a>
+            </li>
+            <li>
+              <a href="/material">
+                <b> Material</b>
+              </a>
+            </li>
+            <li>
+              <a href="/notification">
+                <b> Notifications</b>
+              </a>
+            </li>
+            <li>
+              <a href="/logout"> <b>logout</b>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidenav trigger -->
+        <a href="#" class="sidenav-trigger right show-on-large" data-target="nav">
+          <i class=" material-icons fixed transparent white-text right">menu</i>
+        </a>
+        <a href="#" data-activates="fixed-nav" class="button-collapse right">
+          <ul class="right hide-on-med-and-down">
+            <li>
+            </li>
+          </ul>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav blue lighten-5  show-on-large " id="nav">
+    <ul id="slide-out" class="side-nav ">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="img/background.jpg" alt="">
+          </div>
+          <a href="#">
+            <img src="img/person1.jpg" alt="" class="circle">
+          </a>
+          <a href="#">
+            <span class="name white-text">Logged in as <%= varname %></span>
+          </a>
+        </div>
+      </li>
+      <li>
+
+      </li>
+      <div class="divider"></div>
+      <li>
+        <a href="/portal" class="black-text">
+          <i class="material-icons blue-text">people</i> Student Portal</a>
+      </li>
+      <div class="divider"></div>
+      <li>
+        <a href="/blog" class="black-text">
+          <i class="material-icons blue-text">event_notes</i> Blog</a>
+      </li>
+      <div class="divider"></div>
+      <li>
+        <a href="/material" class="black-text">
+          <i class="material-icons blue-text">book</i>Course Material</a>
+      </li>
+      <div class="divider"></div>
+      <li>
+        <a href="/baserooms" class="black-text">
+          <i class="material-icons blue-text">room</i>Classroom Occupation</a>
+      </li>
+      <div class="divider"></div>
+      <li>
+        <a class="subheader">Account Controls</a>
+      </li>
+
+      <li>
+        <a href="/settings" class="waves-effect">Settings</a>
+      </li>
+      <div class="divider"></div>
+      <li>
+        <a href="/logout" class="waves-effect">Logout</a>
+      </li>
+      <br />
+      <div class="divider"></div>
+    </ul>
+  </ul>
+
+
+  </div>
+  </div>
+  </nav>
+  </div>
+  </header>
+
+
+  <section class="section section-posts grey lighten-4">
+    <div class="container">
+      <!-- Cards container -->
+      <div class="col s12 m12 l6">
+
+        <h4>Events/Notifications</h4>
+        <h5>May 2019</h5>
+        <div id="card-container" class="row">
+          <!-- Col: Card 1 -->
+          <% print.forEach(function (notification) { %>
+          <div class="row s12 m6 l4">
+
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-content white-text">
+                <div class="card__meta">
+                  <a href="#"><i class="small material-icons">room</i>Web Design</a>
+                  <time><%=notification.Date %></time>
+                </div>
+                <span class="card-title grey-text text-darken-4"><%=notification.Desc %></span>
+
+                <p class="card-subtitle grey-text text-darken-2"><%=notification.Sender %> <span
+                    class="text-darken-2 card-info"><i class="small material-icons">label</i></span>
+              </div>
+
+            </div>
+            <% }) %>
+            <!-- End of col -->
+            <!-- Col: Card 1 -->
+            <!-- End of card -->
+          </div>
+          <!-- Col: Card 1 -->
+
+
+        </div>
+      </div>
+      <!--marker-->
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="section section-footer center blue">
+    <div class="page-footer blue darken-4">
+      <div class="container blue darken-4">
+        <div class="row">
+          <p class="flow-text">Smart Campus &copy; 2019</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Scripts -->
+  <script src="js/jquery-minified.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script>
+    $('#tabs-swipe-demo').tabs({
+      swipeable: true
+    });
+    $(document).ready(function () {
+      M.AutoInit();
+      // Counter
+      $('.count').each(function () {
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+              $(this).text(Math.ceil(now));
+            }
+          });
+      });
+      // Init Select
+      $('select').material_select();
+
+      CKEDITOR.replace('body');
+    });
+
+  </script>
+</body>
+
+</html>

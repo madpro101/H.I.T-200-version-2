@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lecturer Login</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/iconfont/material-icons.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <!-- style for sign up page -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+    <header class="main-headers">
+        <div class="navbar-fixed">
+            <nav class="blue darken-4 white-text">
+
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#Home" class="brand-logo deep-purple-text">
+                            <b>
+                                <span class="white-text ">Lecturer Login
+                            </b>
+                            </span>
+
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="body_background">
+        <section class="section section-login">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m8 offset-m2 l6 offset-l3">
+                        <div class="card-panel login grey lighten-4 white-text center login-page" id="radius">
+
+
+                            <h3>
+                                <span class="black-text"><b>Login</b>
+                                </span>
+                            </h3>
+                            <br>
+
+                            <% if (error) { %>
+                            <h5>
+                                <span class="red-text"><b><%=error %></b>
+                                </span><% } %></h5>
+                            <h6 class="black-text"><b>Employee_no</b></h6>
+
+                            <form id="auth_form" action='http://localhost:8014/adminauth' method='post'>
+
+                                <div class="input-field  black-text">
+                                    <i class="material-icons prefix">person_outline</i>
+                                    <input type="text" id="Employee_no" name="Employee_no" placeholder="H170134X"
+                                        class="black-text">
+                                    <label class="black-text " for="Re"></label>
+                                </div>
+                                <br>
+                                <h6 class="black-text"><b>Password</b></h6>
+                                <div class="input-field black-text">
+                                    <i class="material-icons prefix">lock</i>
+                                    <input type="password" name="Password" id="Password" placeholder="password"
+                                        class="black-text">
+                                    <label class="black-text" for="password"></label>
+                                </div>
+                                <br>
+
+                                <li>
+                                    <a href="\" class=" btn grey btn-flat">
+                                        <b>
+                                           Cancel
+                                        </b>
+                                    </a>
+
+                                </li>
+                                <br>
+                                <li><b>
+                                        <i class="material-icons white-text center"><input type="submit" value="Login"
+                                                class="btn grey btn-flat">
+                                        </i>
+
+                                    </b>
+
+
+                                </li>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <br>
+    </div>
+    <!-- footer -->
+    <section class="section section-footer center blue">
+        <div class="page-footer blue darken-4">
+            <div class="container blue darken-4">
+                <div class="row">
+                    <p class="flow-text">Smart Campus &copy; 2019</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src=" js/jquery-minified.js "></script>
+    <script src="js/materialize.min.js "></script>
+    <script>
+        M.AutoInit();
+
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            var validationErrors = []
+            $('#auth_form').submit(function (e) {
+                var Employee_no = $('#Employee_no').val();
+
+                var Password = $('#Password').val();
+                $(".error").remove();
+                validationErrors = []
+
+                if (Employee_no.length < 1) {
+                    validationErrors.push({
+                        inputId: 'Employee_no',
+                        message: 'This field is required'
+                    })
+                    // $('#Regno').after('<span class="error red-text"">This field is required</span>');
+                } else {
+                    var empEx = /([a-zA-Z])([0-9]{3})/g;
+                    var validEmployee_no= empEx.test(Employee_no);
+                    if (!validEmployee_no) {
+                        validationErrors.push({
+                            inputId: 'Employee_no',
+                            message: 'Enter a validEmployee_no'
+                        })
+                        // $('#Regno').after('<span class="error red-text>Enter a valid Regno</span>');
+                    }
+                }
+                if (Password.length < 8) {
+                    validationErrors.push({
+                        inputId: 'Password',
+                        message: 'Password must be at least 8 characters long'
+                    })
+                    // $('#Password').after('<span class="error  red-text" >Password must be at least 8 characters long</span>');
+                }
+
+
+
+                console.table(validationErrors)
+                
+                if (validationErrors.length > 0) {
+                    
+                    validationErrors.forEach(error => {
+                        $(`#${error.inputId}`).after(`<span class="error  red-text" >${error.message}</span>`);
+                    })
+                    e.preventDefault();
+                }
+
+            });
+
+            // $("form").bind("submit", preventDefault);
+        });
+    </script>
+
+</body>
+
+</html>

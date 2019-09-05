@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Settings</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/iconfont/material-icons.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <!-- style for sign up page -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header class="main-headers">
+        <div class="navbar-fixed">
+            <nav class="blue darken-4 white-text">
+
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#Home" class="brand-logo deep-purple-text">
+                            <b>
+                                <span class="white-text ">Smart Settings
+                            </b>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="body_background">
+        <section class="section section-login">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m8 offset-m2 l6 offset-l3">
+
+
+                        <b>
+                            <h3>
+                                <span class="white-text">
+                                </span>
+                            </h3>
+                        </b>
+
+                        <br>
+                        <form action='http://localhost:8014/update' method='post'>
+                            <h5><b> Would you like to change your User Name?</b></h5>
+                            <h6 class="black-text">Input Currrent User-name</h6>
+                            <div class="input-field  black-text">
+                                <i class="material-icons prefix">person_outline</i>
+                                <input type="text" id="FullName" name="FullName" placeholder="<%FullName>">
+                                    <label class="black-text " for=""></label>
+                                </div>
+                                <h6 class="black-text">Input New User-name</h6>
+                                <div class="input-field  black-text">
+                                    <i class="material-icons prefix">person_outline</i>
+                                    <input type="text" id="FullName" name="FullName" placeholder="<%FullName>">
+                                        <label class="black-text " for=""></label>
+                                    </div>
+                                <br>
+                                <h5><b> Would you like to change your Password?</b></h5>
+                                <h6 class="black-text">Input Current Password</h6>
+                                <div class="input-field  black-text">
+                                    <i class="material-icons prefix">lock</i>
+                                    <input type="Password" name="Password" id="Password" placeholder="password">
+                                    <label class="black-text" for="password"></label>
+
+                                </div>
+                                    <h6 class="black-text">Input New Password</h6>
+                                    <div class="input-field black-text">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input type="Password" name="Password" id="Password" placeholder="password">
+                                        <label class="black-text" for="password"></label>
+    
+                                    </div>
+                                <h5><b>Current Profile Picture</b></h5>
+                                <div>
+                                    <a href="#">
+                                      <img src="img/person1.jpg" alt="" class="circle">
+                                    </a>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <h5><b> Would you like to change your Profile Picture?</b></h5>
+                                <div> 
+                                 <label class="black-text" for="change profile pic"></label>
+                                    <label class="black-text" for="current profile picture"></label> <img src="<%url>">"
+                                    <input type="file" name="sampleFile"class="grey" id="radius" />
+                                    </div>
+                                    <br>
+                                    <input type ='submit' value='update!'class=" btn grey right" id="radius"/>
+                                <br>
+
+
+                                <br>
+                               
+                            </form>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <br>
+    </div>
+    <!-- footer -->
+    <section class="section section-footer center blue">
+            <div class="page-footer blue darken-4">
+              <div class="container blue darken-4">
+                <div class="row">
+                  <p class="flow-text">Smart Campus &copy; 2019</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+</body>
+
+</html>

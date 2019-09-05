@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Sign Up</title>
+
+
+
+    <!-- Stylesheets -->
+
+    <link rel="stylesheet" href=" css/iconfont/material-icons.css">
+
+    <link rel="stylesheet" href="css/materialize.css">
+
+    <!-- style for sign up page -->
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+
+
+<body>
+
+    <header class="main-headers">
+
+        <div class="navbar-fixed">
+
+            <nav class="blue darken-4 white-text">
+
+
+
+                <div class="container ">
+
+                    <div class="nav-wrapper">
+
+                        <a href="#Home" class="brand-logo deep-purple-text">
+
+                            <b>
+
+                                <span class="white-text ">Sign Up
+
+                            </b>
+
+                            </span>
+
+
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <section class="section section-login">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col s12 m8 offset-m2 l6 offset-l3">
+
+                    <div class="card-panel login grey lighten-1 black-text center login-page">
+
+
+
+
+
+                        <h3>
+
+                            <span class="black-text"><b>Sign Up</b>
+
+                            </span>
+
+                        </h3>
+
+
+
+                        <br>
+                        <% if (error) { %>
+                            <h5>
+                                <span class="red-text"><b><%=error %></b>
+                                </span><% } %></h5>
+
+
+                        <form id="reg_form" action='http://localhost:8014/reg' method='post'>
+
+                            <h6 class="black-text"><b>Name</b></h6>
+
+                            <div class="input-field black-text">
+
+                                <i class="material-icons prefix">account_circle</i>
+
+                                <input type="text" id="FullName" name="FullName" placeholder="Tinashe Madivani"
+
+                                    required="required" class="black-text">
+
+                                <label class="black-text " for=""></label>
+
+                            </div>
+
+                            <h6 class="black-text"><b>Reg No.</b></h6>
+
+                            <div class="input-field  black-text">
+
+                                <i class="material-icons prefix">account_circle</i>
+
+                                <input type="text" id="Regno" name="Regno" placeholder="H170263f" required="required"class="black-text">
+
+                                <label class="black-text " for="Registration Number"></label> 
+
+                            </div>
+
+                            <!-- <div class="input-field black-text">
+
+                                <i class="material-icons prefix">account_circle</i> <input type="input" id="FullName"
+
+                                    name="FullName" required="required">
+
+                            </div> -->
+
+                            <!-- <div class="input-field  black-text">
+
+                                <i class="material-icons prefix">account_circle</i>
+
+                                <input type="input" id="Regno" name="Regno" placeholder="H170999C" required="required">
+
+                                <label for="Registration Number"></label>
+
+                            </div> -->
+
+                            <h6 class="black-text"><b>Email.</b></h6>
+
+                            <div class="input-field black-text">
+
+                                <i class="material-icons prefix">email</i>
+
+                                <input type="email" id="Email" name="Email" class="validate">
+
+                                <label date-error="Invalid Email" data-success="Valid Email" for="email"></label>
+
+                            </div>
+
+                            
+
+                            <h6 class="black-text"><b>Password</b></h6>
+
+                            <div class="input-field black-text">
+
+                                <i class="material-icons prefix">lock</i>
+
+                                <input type="password" id="Password" name="Password" required="required"class="black-text">
+
+                                <label for="password"></label>
+
+                            </div>
+
+                            <h6 class="black-text"><b>School</b></h6>
+
+                            <div class="input-field grey-text">
+
+                                <i class="material-icons prefix"></i>
+
+                                <select id="School" name="School" required="required"class="black-text">
+
+                                    <!-- <option value="" disabled selected class="black-text">Select your School
+
+                                    </option> -->
+
+                                    <option value="SIST" class="black-text">Information Science and Technology</option>
+
+                                    <option value="Business" class="black-text">Business Sciences</option>
+
+                                    <option value="Medicine" class="black-text">Medical Sciences</option>
+
+                                    <option value="Engineering" class="black-text">Engineering Science and Technology</option>
+
+                                </select>
+
+                            </div>
+
+                            <h6 class="black-text"><b>Department</b></h6>
+
+                            <!-- <div class="input-field grey-text">
+
+                                <i class="material-icons prefix"></i>
+
+                                <select onchange="loadDepartments()" id="School" name="School" required="required"class="black-text">
+
+                                    <option value="" disabled selected class="black-text">Select your department
+
+                                    </option>
+
+                                    <option value="SIST"></option>
+
+                                    <option value="Business"></option>
+
+                                    <option value="Medicine"></option>
+
+                                    <option value="Engineering"></option>
+
+                                </select>
+
+                            </div> -->
+
+                            <div id="departmentList" class="input-field lighten-2 black-text">
+                                    <select id="Dept" name="Dept" required="required"class="black-text">
+
+                                            <option value="se">Software Engineering</option>
+
+                                            <option value="cs">Computer Science</option>
+                                            <option value="it">Information Technology</option>
+                                            <option value="is">Information Security</option>
+        
+                                            </option> 
+        
+                                          
+                                        </select>
+        
+                                
+
+                            </div>
+
+
+
+                           
+
+                                <a href="/" class="btn grey btn-flat">
+
+                                    <b>
+
+                                        Cancel
+
+                                    </b>
+
+                                </a>
+
+
+                            <br>
+                            <br>
+
+                          
+
+                                <input type="submit" value="signup" class="btn grey btn-flat">
+
+                                <b>
+
+                                </b>
+
+                                </a>
+
+                          
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- footer -->
+
+    <section class="section section-footer center blue darken-4">
+
+        <div class="page-footer blue darken-3">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <p class="flow-text">Smart Campus &copy; 2019</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- scripts -->
+
+    
+
+    <script src=" /js/jquery-minified.js "></script>
+
+    <script src="/js/materialize.min.js "></script>
+    <script>
+        $(document).ready(function () {
+    $("#School").change(function () {
+        var val = $(this).val();
+        if (val == "SIST") {
+            $("#Dept").html("<option value='se'>Software Engineering</option><option value='cs'>Computer Science</option><option value='it'>Information Technology</option><option value='is'>Information Security</option>");
+        } else if (val == "Business") {
+            $("#Dept").html("<option value='e-commerce'>Electronic Commerce</option> <option value='financial_engineering'>Financial Engineering</option>");}
+        // } else if (val == "item3") {
+        //     $("#size").html("<option value='test'>item3: test 1</option><option value='test2'>item3: test 2</option>");
+        // } else if (val == "item0") {
+        //     $("#size").html("<option value=''>--select one--</option>");
+        // }
+    });
+
+
+
+
+    
+    var validationErrors = []
+            $('#reg_form').submit(function (e) {
+                var Regno = $('#Regno').val();
+               var FullName = $('#FullName').val();
+
+                var Password = $('#Password').val();
+                var Email = $('#Email').val();
+                var School = $('#School').val();
+                var Dept = $('#Dept').val();
+                $(".error").remove();
+                validationErrors = []
+
+                if (Regno.length < 1) {
+                    validationErrors.push({
+                        inputId: 'Regno',
+                        message: 'This field is required'
+                    })
+                    // $('#Regno').after('<span class="error red-text"">This field is required</span>');
+                } else {
+                    var regEx = /(H|h)([0-9]{6})([a-zA-Z])/g;
+                    var validRegno = regEx.test(Regno);
+                    if (!validRegno) {
+                        validationErrors.push({
+                            inputId: 'Regno',
+                            message: 'Enter a valid Regno'
+                        })
+                        // $('#Regno').after('<span class="error red-text>Enter a valid Regno</span>');
+                    }
+                }
+                if (FullName.length < 1) {
+                    validationErrors.push({
+                        inputId: 'FullName',
+                        message: 'This field is required'
+                    })}
+
+                    if (Email.length < 1) {
+                    validationErrors.push({
+                        inputId: 'Email',
+                        message: 'This field is required'
+                    })
+                    // $('#Regno').after('<span class="error red-text"">This field is required</span>');
+                }   if (School.length < 1) {
+                    validationErrors.push({
+                        inputId: 'School',
+                        message: 'This field is required'
+                    })
+                    // $('#Regno').after('<span class="error red-text"">This field is required</span>');
+                }   if (Dept.length < 1) {
+                    validationErrors.push({
+                        inputId: 'Dept',
+                        message: 'This field is required'
+                    })
+                    // $('#Regno').after('<span class="error red-text"">This field is required</span>');
+                } 
+                    
+                if (Password.length < 8) {
+                    validationErrors.push({
+                        inputId: 'Password',
+                        message: 'Password must be at least 8 characters long'
+                    })
+                    // $('#Password').after('<span class="error  red-text" >Password must be at least 8 characters long</span>');
+                }
+
+
+
+                console.table(validationErrors)
+                
+                if (validationErrors.length > 0) {
+                    
+                    validationErrors.forEach(error => {
+                        $(`#${error.inputId}`).after(`<span class="error  red-text" >${error.message}</span>`);
+                    })
+                    e.preventDefault();
+                }
+
+            });
+
+});
+    </script>
+ 
+    
+
+    <script>
+
+        M.AutoInit();
+
+    </script>
+
+</body>
+
+
+
+</html>

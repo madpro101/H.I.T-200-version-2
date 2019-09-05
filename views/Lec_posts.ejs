@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart Campus</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/iconfont/material-icons.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <!-- style for sign up page -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- style for sign up page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture Posts</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <nav class="blue darken-4">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">
+          <b>
+            <span>
+              Lecturer Posts
+          </b>
+          </span>
+          <a href="#" class="sidenav-trigger right show-on-large" data-target="nav">
+            <i class="material-icons  transparent white-text right">menu</i>
+          </a>
+          <a href="#" data-activates="fixed-nav" class="button-collapse right">
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <b>
+                  <a href="/admin_home">Home</a>
+              </li>
+              <li class="active">
+                <a href="/admin_posts">Posts</a>
+              </li>
+              <!-- <li>
+                <a href="/users">Classes</a>
+              </li> -->
+            <li>
+                <a href="/Admin_blog">Blog</a>
+            </li>
+            <li>
+                <a href="/Classrooms">Baseroom Occuption</a>
+              </li> 
+             
+               <li>
+                <a href="/admin_settings" class="waves-effect">Configurations</a>
+              </li>
+              <li> 
+                <a href="/admin_logout" class="waves-effect">Logout</a>
+              </li>
+              
+
+            </ul>
+
+
+
+            <ul class="sidenav blue lighten-5  show-on-large right" id="nav">
+              <ul id="slide-out" class="side-nav ">
+                <li>
+                  <div class="user-view">
+                    <div class="background">
+                      <img src="img/background.jpg" alt="">
+                    </div>
+                    <a href="#">
+                      <img src="img/person1.jpg" alt="" class="circle">
+                    </a>
+                    <a href="#">
+                      <span class="name white-text">Adminstrator</span>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <a href="/admin_home">
+                    <i class="material-icons">Home</i> Home</a>
+
+                </li>
+                <li>
+                  <a href="/admin_home">Home</a>
+                </li>
+                <div class="divider"></div>
+                <li>
+                  <a href="/users">Users</a>
+                </li>
+                <div class="divider"></div>
+                <li>
+                  <a href="#!">Posts</a>
+                </li>
+                <div class="divider"></div>
+                <li>
+                  <a class="subheader">Account Controls</a>
+                </li>
+                <div class="divider"></div>
+                <li>
+                <!-- <li>
+                  <a href="/admin_settings" class="waves-effect">Settings</a>
+                </li>
+                <li> -->
+                  <a href="/admin_logout" class="waves-effect">Logout</a>
+                </li>
+                <a href="/admin_login" class="waves-effect">Logout</a>
+                </li>
+              </ul>
+            </ul>
+          </a>
+      </div>
+  </nav>
+  <!-- Section: Posts -->
+  <section class="section section-posts grey lighten-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <!-- SWIPABLE TABS -->
+
+              <ul id="tab-swipe" class="tabs">
+                <li class="tab col  s3">
+                  <a href="#tab-swipe-1">uploaded assignments</a>
+                </li>
+                <li class="tab col  s3">
+                  <a href="#tab-swipe-2">Send posts</a>
+                </li>
+                <li class="tab col s3">
+                  <a href="#tab-swipe-3">Upload Assignment/Coursematerial</a>
+                </li>
+
+              </ul>
+
+              <div id="tab-swipe-1" class="col s12 ">
+
+                <table class="striped">
+                  <thead>
+                    <tr>
+                      <th>Code</th>
+                      <th>Title</th>
+                      <th>Content</th>
+                      <th>Description</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <%files.forEach(function(item){%>
+
+                    <tr>
+                      <td>EEE 223</td>
+                      <td>Digital Signal Proccessing</td>
+                      <td><%=item%></td>
+                      <td>sorry for late submission</td>
+                      <td>
+                        <a class="btn blue darken-2" href="/download/<%=item%>" id="radius">Download</a>
+                      </td>
+                    </tr>
+                    <%})%>
+
+                  </tbody>
+                </table>
+              </div>
+
+              <div id="tab-swipe-2" class="col s12 ">
+                <!-- Section: Posts -->
+
+                <section class="section section-posts grey lighten-2 black-text">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col s12">
+                        <div class="card-panel login grey lighten-1 black-text center login-page">
+
+
+                          <h3>
+
+                            <span class="black-text"><b>Send Posts</b>
+
+                            </span>
+
+                          </h3>
+
+
+
+                          <br>
+
+                       <form onsubmit="console.log('Yes Im sending to backend')" action="/admin_post" method="POST">                           <h6 class="black-text"><b>Sender</b></h6>
+
+                            <div class="input-field black-text">
+
+                              <i class="material-icons prefix">account_circle</i>
+
+                              <input type="text" id="Sender" name="Sender" placeholder="Tinashe Madivani"
+                                required="required" class="black-text">
+
+                              <label class="black-text " for=""></label>
+
+                            </div>
+
+                            <h6 class="black-text"><b>Desc.</b></h6>
+
+                            <div class="input-field  black-text">
+
+                              <i class="material-icons prefix">account_circle</i>
+
+                              <input type="text" id="Desc" name="Desc" placeholder="the is event ....."
+                                required="required" class="black-text">
+
+                              <label class="black-text " for="Registration Number"></label>
+
+                            </div>
+
+                           
+                               <h6 class="black-text"><b>Date & time sent </b></h6>
+
+                            <div class="input-field black-text">
+
+                              <i class="material-icons prefix">lock</i>
+
+
+
+                              <input onchange="validateDate()" type="date" class="" id="postdate" name="Date">
+                            </div>
+
+
+                            <label for="password"></label>
+
+
+                            <h6 class="black-text"><b>Notification Type</b></h6>
+
+                            <div class="input-field grey-text">
+
+                              <i class="material-icons prefix"></i>
+
+                              <select id="Ntype" name="Ntype" required="required" class="black-text">
+
+                              
+
+                                <option value="General" class="black-text">General</option>
+
+                                <option value="Event" class="black-text">Event</option>
+
+                                <option value="Course related">Course related</option>
+                            </div>
+                            
+                            <button type="submit">Send</button>
+                              <input onclick="console.log('ouch stop clicking me')" type="submit" value="send" class="btn grey btn-flat">
+                          </form>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- upload page  -->
+    <div id="tab-swipe-3" class="col s12 ">
+
+      <!-- Section: Posts -->
+      <section class="section section-posts grey lighten-4">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <!-- <div class="card">
+                  <div class="card-content">
+                    <select id="" required="required" style="display : inline ;">
+                      <option value="" disabled selected>Select your Course
+                      </option>
+                      <option value="">Digital Signal Processing</option>
+                      <option value="">Numerical Methods</option>
+                      <option value="">Technoprenuership</option>
+                      <option value="">Computer Graphics and Visualization
+                      </option>
+                    </select>
+
+                    
+                    <div class="input-field">
+                      <input type="text" class="datepicker" id="date">
+                      <label for="date">Select Date</label>
+                    </div
+                     TIME PICKER 
+                    <di
+                      <label for="time">Choose a Time</label>
+                      <input type="text" class="timepicker" id="time">
+
+                    </div>
+                     TEXT
+                    <div class="input-field">
+                      <input type placeholder="Message" id="message" class="materialize-textarea"></textarea>
+                      <label for="message">Message</label>
+                    </div>
+                    <form ref='uploadFo' id='uploadForm' action='http://localhost:8014/upload' method='post'
+                      encType="multipart/form-data">
+
+                      <input type="file" name="sampleFile" class="grey" id="radius" />
+                      <input type='submit' value='Upload!' class="btn right grey white-text" />
+                  <div style="display: inline-block; width: 100%;"> <input type='submit'
+                                  class="btn teal lighten-2" value='Send' /> 
+                  </div>
+                  </form>
+
+                </div> -->
+              <div class="card-panel login grey lighten-1 black-text center login-page">
+
+
+
+
+
+                <h3>
+
+                  <span class="black-text"><b>Send Posts</b>
+
+                  </span>
+
+                </h3>
+
+
+
+                <br>
+
+
+
+                <form id="reg_form" action='http://localhost:8014/upload' method='post'>
+
+                  <h6 class="black-text"><b>Sender</b></h6>
+
+                  <div class="input-field black-text">
+
+                    <i class="material-icons prefix">account_circle</i>
+
+                    <input type="text" id="Sender" name="Sender" placeholder="Tinashe Madivani" required="required"
+                      class="black-text">
+
+                    <label class="black-text " for=""></label>
+
+                  </div>
+
+                  <h6 class="black-text"><b>Desc.</b></h6>
+
+                  <div class="input-field  black-text">
+
+                    <i class="material-icons prefix">account_circle</i>
+
+                    <input type="text" id="Desc" name="Desc" placeholder="the is event ....." required="required"
+                      class="black-text">
+
+                    <label class="black-text " for="Registration Number"></label>
+
+                  </div>
+                  <h6 class="black-text"><b>Course.</b></h6>
+
+                  <div class="input-field  black-text">
+
+                    <i class="material-icons prefix">account_circle</i>
+
+                    <input type="text" id="Course" name="Course " placeholder="the is event ....." required="required"
+                      class="black-text">
+
+                    <label class="black-text " for="Registration Number"></label>
+
+                  </div>
+
+                  
+                  <!-- <div class="input-field black-text">
+
+                          <i class="material-icons prefix">account_circle</i> <input type="input" id="FullName"
+
+                              name="FullName" required="required">
+
+                      </div> -->
+
+                  <!-- <div class="input-field  black-text">
+
+                          <i class="material-icons prefix">account_circle</i>
+
+                          <input type="input" id="Regno" name="Regno" placeholder="H170999C" required="required">
+
+                          <label for="Registration Number"></label>
+
+                      </div> -->
+
+                  <h6 class="black-text"><b>DueDate /Event Date</b></h6>
+
+                  <div class="input-field black-text">
+
+                    <i class="material-icons prefix">date</i>
+
+
+                    <label for="date">Date</label>
+                    <input type="date" class="form-control" id="DueDate" name="date">
+
+
+                    <label for="email"></label>
+                  </div>
+
+
+
+
+
+                  <h6 class="black-text"><b>Date & time sent </b></h6>
+
+                  <div class="input-field black-text">
+
+                    <i class="material-icons prefix">lock</i>
+
+
+
+                    <input type="date" onload="getDate()" class="" id="Date" name="date">
+                  </div>
+
+
+                  <label for="password"></label>
+
+                  <h6 class="black-text"><b>send assignment/coursematerial </b></h6>
+
+                  <div class="input-field grey-text">
+
+                    <i class="material-icons prefix"></i>
+                    <input type="file" name="sampleFile" class="grey" id="radius" />
+                  </div>
+
+
+
+
+                  <br>
+
+                  <a>
+
+                    <input type="submit" value="send" class="btn grey btn-flat">
+
+                    <b>
+
+                    </b>
+
+                  </a>
+
+                  </a>
+
+                </form>
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  </div>
+  </section>
+
+  <!-- Fixed Action Button -->
+  <!-- <div class="fixed-action-btn">
+    <a href="#post-modal" class="modal-trigger btn-floating btn-large blue lighten-2">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
+
+   Add Post Modal 
+  <div id="post-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Post</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+        <div class="input-field">
+          <select>
+            <option value="" disabled selected>Select option</option>
+            <option value="1">Web Development</option>
+            <option value="2">Graphic Design</option>
+            <option value="3">Tech Gadgets</option>
+            <option value="4">Other</option>
+          </select>
+          <label>Category</label>
+        </div>
+        <div class="input-field">
+          <textarea name="body" id="body" class="materialize-textarea"></textarea>
+          <label for="body">Body</label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue lighten-2 white-text">Submit</a>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- Footer -->
+  <section class="section section-footer center blue bottom">
+    <div class="page-footer blue darken-4">
+      <div class="container blue darken-4">
+        <div class="row">
+          <p class="flow-text">Smart Campus &copy; 2019</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Scripts -->
+  <script src="js/jquery-minified.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script>
+    function validateDate(e) {
+      var date = $('#postdate').val()
+      if(date < new Date()) {
+        console.log('Wrong Date')
+      }
+    }
+    $('#tabs-swipe-demo').tabs({
+      swipeable: true
+    });
+    $(document).ready(function () {
+      M.AutoInit();
+      // Counter
+      $('.count').each(function () {
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+              $(this).text(Math.ceil(now));
+            }
+          });
+      });
+
+
+
+
+
+      var validationErrors = []
+      $('#reg_form').submit(function (e) {
+        console.log('Validating')
+        var Regno = $('#Regno').val();
+        var FullName = $('#FullName').val();
+
+        var Password = $('#Password').val();
+        $(".error").remove();
+        validationErrors = []
+
+        if (Regno.length < 1) {
+          validationErrors.push({
+            inputId: 'Regno',
+            message: 'This field is required'
+          })
+          // $('#Regno').after('<span class="error red-text"">This field is required</span>');
+        } else {
+          var regEx = /(H|h)([0-9]{6})([a-zA-Z])/g;
+          var validRegno = regEx.test(Regno);
+          if (!validRegno) {
+            validationErrors.push({
+              inputId: 'Regno',
+              message: 'Enter a valid Regno'
+            })
+            // $('#Regno').after('<span class="error red-text>Enter a valid Regno</span>');
+          }
+        }
+        if (FullName.length < 1) {
+          validationErrors.push({
+            inputId: 'FullName',
+            message: 'This field is required'
+          })
+        }
+
+
+
+        if (Password.length < 8) {
+          validationErrors.push({
+            inputId: 'Password',
+            message: 'Password must be at least 8 characters long'
+          })
+          // $('#Password').after('<span class="error  red-text" >Password must be at least 8 characters long</span>');
+        }
+
+
+
+        console.table(validationErrors)
+
+        if (validationErrors.length > 0) {
+
+          validationErrors.forEach(error => {
+            $(`#${error.inputId}`).after(`<span class="error  red-text" >${error.message}</span>`);
+          })
+          e.preventDefault();
+        }
+
+      });
+
+
+
+      // Init Select
+
+
+      CKEDITOR.replace('body');
+
+
+
+
+    });
+
+
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#School").change(function () {
+        var val = $(this).val();
+        if (val == "SIST") {
+          $("#Dept").html("<option value='se'>Software Engineering</option><option value='cs'>Computer Science</option><option value='it'>Information Technology</option><option value='is'>Information Security</option>");
+        } else if (val == "Business") {
+          $("#Dept").html("<option value='e-commerce'>Electronic Commerce</option> <option value='financial_engineering'>Financial Engineering</option>");
+        }
+        // } else if (val == "item3") {
+        //     $("#size").html("<option value='test'>item3: test 1</option><option value='test2'>item3: test 2</option>");
+        // } else if (val == "item0") {
+        //     $("#size").html("<option value=''>--select one--</option>");
+        // }
+      });
+
+
+
+
+
+      var validationErrors = []
+      $('#reg_form').submit(function (e) {
+        var Regno = $('#Regno').val();
+        var FullName = $('#FullName').val();
+
+        var Password = $('#Password').val();
+        $(".error").remove();
+        validationErrors = []
+
+        if (Regno.length < 1) {
+          validationErrors.push({
+            inputId: 'Regno',
+            message: 'This field is required'
+          })
+          // $('#Regno').after('<span class="error red-text"">This field is required</span>');
+        } else {
+          var regEx = /(H|h)([0-9]{6})([a-zA-Z])/g;
+          var validRegno = regEx.test(Regno);
+          if (!validRegno) {
+            validationErrors.push({
+              inputId: 'Regno',
+              message: 'Enter a valid Regno'
+            })
+            // $('#Regno').after('<span class="error red-text>Enter a valid Regno</span>');
+          }
+        }
+        if (FullName.length < 1) {
+          validationErrors.push({
+            inputId: 'FullName',
+            message: 'This field is required'
+          })
+        }
+
+
+
+        if (Password.length < 8) {
+          validationErrors.push({
+            inputId: 'Password',
+            message: 'Password must be at least 8 characters long'
+          })
+          // $('#Password').after('<span class="error  red-text" >Password must be at least 8 characters long</span>');
+        }
+
+
+
+        console.table(validationErrors)
+
+        if (validationErrors.length > 0) {
+
+          validationErrors.forEach(error => {
+            $(`#${error.inputId}`).after(`<span class="error  red-text" >${error.message}</span>`);
+          })
+          e.preventDefault();
+        }
+
+      });
+
+    });</script>
+</body>
+
+</html>

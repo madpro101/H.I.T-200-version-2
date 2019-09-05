@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AdminBlog</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/iconfont/material-icons.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <!-- style for sign up page -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/chat.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body id="chatbody">
+    <div class="navbar-fixed">
+        <nav class="blue darken-4" id="secondnav">
+            <div class="container ">
+                <div class="nav-wrapper">
+                    <a href="#Home" class="brand-logo deep-purple-text ">
+
+                        <b>
+                            <span class="white-text ">Smart Blog
+                        </b>
+                        </span>
+                        </b>
+                    </a>
+                    <ul class="sidenav blue lighten-5  show-on-large right" id="nav">
+                        <ul id="slide-out" class="side-nav ">
+                          <li>
+                            <div class="user-view">
+                              <div class="background">
+                                <img src="img/background.jpg" alt="">
+                              </div>
+                              <a href="#">
+                                <img src="img/person1.jpg" alt="" class="circle">
+                              </a>
+                              <a href="#">
+                                <span class="name white-text">Adminstrator</span>
+                              </a>
+                            </div>
+                          </li>
+                          <li>
+                            <a href="/admin_home">
+                              <i class="material-icons">Home</i> Home</a>
+          
+                          </li>
+                          <li>
+                            <a href="/admin_home">Home</a>
+                          </li>
+                          <div class="divider"></div>
+                          <li>
+                            <a href="/users">Classes</a>
+                          </li>
+                          <div class="divider"></div>
+                          <li>
+                            <a href="#!">Posts</a>
+                          </li>
+                          <div class="divider"></div>
+                          <li>
+                            <a class="subheader">Account Controls</a>
+                          </li>
+                          <div class="divider"></div>
+                          <li>
+                          <li>
+                            <a href="/admin_settings" class="waves-effect">Configiration</a>
+                          </li>
+                          <li>
+                            <a href="/admin_logout" class="waves-effect">Logout</a>
+                          </li>
+                          <a href="/admin_login" class="waves-effect">Logout</a>
+                          </li>
+                        </ul>
+                      </div>
+                <!-- sidenav trigger -->
+                <a href="#" class="sidenav-trigger right show-on-large" data-target="nav">
+                    <i class=" material-icons fixed transparent white-text right">menu</i>
+                </a>
+                <a href="#" data-activates="fixed-nav" class="button-collapse right">
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                        </li>
+                    </ul>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Sidenav -->
+    <ul class="sidenav blue  lighten-5  show-on-large " id="nav">
+        <ul id="slide-out" class="side-nav ">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="img/background.jpg" alt="">
+                    </div>
+                    <a href="#">
+                        <img src="img/person1.jpg" alt="" class="circle">
+                    </a>
+                    <a href="#">
+                        <span class="name white-text">Logged in as <%= name %></span>
+                    </a>
+                </div>
+            </li>
+            <li>
+
+            </li>
+            <!-- <div class="divider"></div>
+            <!-- <li>
+                <a href="/portal" class="black-text">
+                    <i class="material-icons blue -text">people</i> Student Portal</a>
+            </li> -->
+            <div class="divider"></div>
+            <li>
+                <a href="/blog" class="black-text">
+                    <i class="material-icons blue -text">event_notes</i> Blog</a>
+            </li>
+            <div class="divider"></div>
+            <li>
+                <a href="/material" class="black-text">
+                    <i class="material-icons blue -text">book</i> Material</a>
+            </li>
+            <div class="divider"></div>
+            <li>
+                <a href="/baserooms1" class="black-text">
+                    <i class="material-icons blue -text">room</i>Classroom Occupation</a>
+            </li>
+            <div class="divider"></div>
+            <li>
+                <a class="subheader">Account Controls</a>
+            </li>
+
+            <li>
+                <a href="/settings" class="waves-effect">Settings</a>
+            </li>
+            <div class="divider"></div>
+            <li>
+                <a href="/logout" class="waves-effect">Logout</a>
+            </li> -->
+            <br />
+            <div class="divider"></div>
+        </ul>
+    </ul>
+
+    <div class="container chat_container">
+        <div class="hoverable">
+            <nav class="left-align ">
+                <div class="nav-wrapper blue darken-4">
+                    <a href="#!" class="brand-logo">
+                        <img src="/img/logo.jpg" class="circle responsive-img">
+                        <i id="typing"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div id="chatbox" class="card-panel">
+                <ul id="msgbox">
+                </ul>
+            </div>
+            <form class="col s12" method="POST" action="/chat">
+                <div class="row">
+                    <div class="input-field">
+                        <input type="hidden" name="name" value="<%=name%>">
+                        <input type="text" id="message" name="message" class="black-text">
+                        <label for="message">&nbsp;&nbsp;Type your message here</label>
+                        <br>
+                        <button class="btn blue darken-3 waves-effect waves-light right" type="submit">Send<i
+                                class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="fixed-action-btn" id="attach">
+                <a class="btn-floating btn-large blue ">
+                    <i class="large material-icons">mode_edit</i>
+                </a>
+                <ul>
+                    <li>
+                        <a class="btn-floating green">
+                            <i class="material-icons">insert_chart</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-floating yellow darken-1">
+                            <i class="material-icons">format_quote</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-floating green">
+                            <i class="material-icons">publish</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-floating blue">
+                            <i class="material-icons">attach_file</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <!-- Footer -->
+    <section class="section section-footer center blue bottom">
+        <div class="page-footer blue darken-4">
+            <div class="container blue darken-4">
+                <div class="row">
+                    <p class="flow-text">Smart Campus &copy; 2019</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- scripts -->
+    <script src=" js/jquery-minified.js "></script>
+    <script src="js/materialize.min.js "></script>
+
+</body>
+
+<html>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
+<script type="text/javascript" src="/js/client.js"></script>
+
+</html>

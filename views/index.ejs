@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart Campus</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/iconfont/material-icons.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <!-- style for sign up page -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Campus</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="navbar-fixed">
+      <nav class="blue darken-4 white-text">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#Home" class="brand-logo deep-purple-text">
+              <b>
+                <span class="white-text ">Smart Campus
+              </b>
+              </span>
+              </b>
+            </a>
+            <a href="#" data-activates="mobile-nav" class="button-collapse">
+              <ul class="right hide-on-med-and-down">
+                <li>
+                  <a class="active-link white-text" href="#Landing">About</a>
+                </li>
+                
+                  <li>
+                  <a class="waves-effect btn btn flat modal-trigger" href="#modal1"> <i class="material-icons white-text right">people</i>signup</a>
+              
+                  
+                  </li>
+              
+                    <a class="waves-effect btn flat btn modal-trigger" href="#modal2"><i class="material-icons white-text right">account_circle</i>login
+                  </a>
+                </li>
+                
+                <li>
+          </div>
+        </div>
+    </div>
+    <!-- Showcase -->
+    <div class="showcase container">
+      <div class="row">
+        <div class="col s12 m10 offset-m1 center ">
+          <br>
+
+          <h2 class="blue-text darken-2 ">
+            <b><br>
+
+              Making your Campus life worth living
+            </b>
+          </h2>
+          <br>
+
+        </div>
+      </div>
+    </div>
+    </nav>
+  </header>
+
+  <!-- =============================================================================== -->
+  <!-- Section : Icon Boxes -->
+  <section class="section section-icons grey lighten-4 center">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="card-panel blue lighten-4" id="card-properties">
+            <i class="material-icons large blue-text">room</i>
+            <p>Find out which Baseroom is occupied</p>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card-panel" id="card-properties">
+            <i class="material-icons large blue-text">book</i>
+            <p>Easily access course material</p>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card-panel blue lighten-4" id="card-properties">
+            <i class="material-icons large blue-text">notifications</i>
+            <p>Be aware of University Notifications </p>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card-panel" id="card-properties">
+            <i class="material-icons large blue-text">account_circle</i>
+            <p>Access your Student's Portal</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================================================== -->
+  <!-- Footer -->
+  <sec
+  tion class="section section-footer center blue">
+    <div class="page-footer blue darken-4">
+      <div class="container blue darken-4">
+        <div class="row">
+          <p class="flow-text">Smart Campus &copy; 2019</p>
+        </div>
+      </div>
+    </div>
+<!--signup modal-->
+    <div id="modal1" class="modal">
+      <div id='modal' class='modal-content grey'  max-height="40%"
+ 
+      width="35%">
+        <a href="/signup" class="btn blue-text darken-4 btn-flat">student
+      </a><br>
+      <br>
+                      
+      <a href="/admin_signup" class="btn btn-flat">Lecturer
+                          </a>
+                
+  </div>
+      
+</div>
+</div>
+  <!--login modal-->
+  <div id="modal2" class="modal "  max-height="40%"
+ 
+  width="35%">
+      <div id='modal' class='modal-content grey'>
+        <a href="/login" class="btn blue-text darken-4  btn-flat">student
+      </a><br>
+                   <br>   
+      <a href="/admin_login" class="btn blue-text darken-4  btn-flat">Lecturer
+                            </a>
+  </div>
+      
+</div>
+</div>
+
+ 
+     
+    
+   
+  </section>
+  <!-- =============================================================================== -->
+  <!-- Login Modal 
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h4>Account Login</h4>
+      <p>Login to access your account dashboard</p>
+      <form>
+        <div class="input-field">
+          <input type="email" id="email">
+          <label for="email">Reg Number</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password">
+          <label for="password">Password</label>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close btn grey" id="forgotpassword">
+        <i></i> Forgot Password</a>
+      <a href="l/lo" class="modal-action modal-close btn blue lighten-2" id="login">
+        <i class="materialize-icons"></i> Login</a>
+    </div>
+  </div>
+  <!-- ======================================================================================= -->
+  <!-- Sign Up modal Modal -
+  <div id="SignUp-modal" class="modal">
+    <div class="modal-content">
+      <h4> Sign Up Here</h4>
+      <form>
+        <div class="input-field">
+          <input type="email" id="name" required="required">
+          <label for="">Name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="Reg" required="required">
+          <label for="Registration Number">Registration Number</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email" class="validate">
+          <label date-error="Invalid Email" data-success="Valid Email" for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" required="required">
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field">
+          <select id="opt1" required="required">
+            <option value="" disabled selected>Select your School
+            </option>
+            <option value="SIST">Information Science and Technology</option>
+            <option value="Business">Business Sciences</option>
+            <option value="Medicine">Medical Sciences</option>
+            <option value="Engineering">Engineering Science and Technology</option>
+          </select>
+        </div>
+        <div class="input-field">
+          <select id="opt2" required="required">
+            <option value="" disabled selected>Select Department
+            </option>
+            <optgroup label="Informatiom Science and Technology">
+              <option value="software">Software Engineering</option>
+              <option value="computer_science">Computer Science</option>
+              <option value="information_technology">Information Technology</option>
+              <option value="information_security">Information Security</option>
+            </optgroup>
+            <optgroup label="Business Sciences">
+              <option value="e-commerce">Electronic Commerce</option>
+              <option value="financial_engineering">Financial Engineering</option>
+              <option value="forensic_accounting">Forensic Accounting And Auditing</option>
+            </optgroup>
+            <optgroup label="Medical Sciences">
+              <option value="pharmacy">Pharmacy</option>
+              <option value="radiography">Radiography</option>
+            </optgroup>
+            <optgroup label="Engineering">
+              <option value="electronic_engineering">Electronic Engineering </option>
+              <option value="industrial_engineering">Industrial and Manufacturing Engineering </option>
+              <option value="chemical_engineering">Chemical Engineering </option>
+              <option value="polymar_technologies">Polymar Technologies </option>
+            </optgroup>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close btn blue lighten-2" id="done">
+        <i class="blue-text lighten-4"></i> Done</a>
+    </div>
+  </div>
+  <!-- ================================================================================= -->
+  <!-- scripts -->
+  <script src=" js/jquery-minified.js "></script>
+  <script src="js/materialize.min.js "></script>
+  <script>
+    M.AutoInit();
+    $('.modal').modal();
+
+  </script>
+  
+</body>
+<html>
+
+</html>

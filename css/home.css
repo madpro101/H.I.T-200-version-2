@@ -1,0 +1,24 @@
+#hitmoto{
+    margin-right: 40px !important;
+}
+
+a {
+    color: #0c0c0c;
+}
+#portal{
+
+width : 99%;
+height:100vh;
+
+  
+  
+
+
+
+}
+#updates{
+    max-height: 450px;
+    overflow: hidden;
+    scroll-behavior: auto;
+    
+}

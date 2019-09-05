@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smart Campus</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/iconfont/material-icons.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <!-- style for sign up page -->
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Campus</title>
+</head>
+
+<!-- <div class="navbar-fixed">
+    <nav class="white">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="" class="brand-logo white-text ">
+                    <img src="img/logo.png" alt="Harare Institute logo">
+
+                    <h4 class="right hide-on-med-and-down blue-text darken-3" id="hitmoto">
+                        Successs Through Innovation
+                    </h4>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+</header> -->
+
+<div class="navbar-fixed">
+    <nav class="blue darken-4" id="secondnav">
+        <div class="container ">
+            <div class="nav-wrapper">
+                <a href="#Home" class="brand-logo deep-purple-text ">
+
+                    <b>
+                        <span class="white-text ">Smart Campus
+                    </b>
+                    </span>
+                    </b>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/home">
+                            <b>Home</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/portal">
+                            <b>Portal</b>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/blog">
+                            <b>Blog</b>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/baserooms">
+                            <b>Baserooms</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/material">
+                            <b> Material</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/notification">
+                            <b> Notifications</b>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/logout"> <b>logout</b>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- sidenav trigger -->
+            <a href="#" class="sidenav-trigger right show-on-large" data-target="nav">
+                <i class=" material-icons fixed transparent white-text right">menu</i>
+            </a>
+            <a href="#" data-activates="fixed-nav" class="button-collapse right">
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                    </li>
+                </ul>
+            </a>
+        </div>
+    </nav>
+</div>
+<!-- Sidenav -->
+
+<ul class="sidenav blue lighten-5  show-on-large " id="nav">
+    <ul id="slide-out" class="side-nav ">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="img/background.jpg" alt="">
+                </div>
+                <a href="#">
+                    <img src="img/person1.jpg" alt="" class="circle">
+                </a>
+                <a href="#">
+                    <span class="name white-text">Logged in as <%= varname %></span>
+                </a>
+            </div>
+        </li>
+        <li>
+
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a href="/portal" class="black-text">
+                <i class="material-icons blue-text">people</i> Student Portal</a>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a href="/blog" class="black-text">
+                <i class="material-icons blue-text">event_notes</i> Blog</a>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a href="/material" class="black-text">
+                <i class="material-icons blue-text">book</i>Course Material</a>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a href="/baserooms" class="black-text">
+                <i class="material-icons blue-text">room</i>Classroom Occupation</a>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a class="subheader">Account Controls</a>
+        </li>
+
+        <li>
+            <a href="/settings" class="waves-effect">Settings</a>
+        </li>
+        <div class="divider"></div>
+        <li>
+            <a href="/logout" class="waves-effect">Logout</a>
+        </li>
+        <br />
+        <div class="divider"></div>
+    </ul>
+</ul>
+
+<!-- Section :tabs -->
+<!--https://portal.hit.ac.zw/-->
+<section class="section section-visitors blue lighten-5">
+    <div> <iframe src="https://portal.hit.ac.zw/" id="portal" class="" style="height: 60vh" width="100%"
+            class="section scrollspy" name="targetframe" allowTransparency="true" scrolling="auto" frameborder="0">
+        </iframe>
+    </div>
+
+</section>
+<!-- Section : Icon Boxes -->
+<section class="section section-icons white center">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m3">
+                <a href="#!">
+                    <div class="card-panel" id="card-height">
+                        <i class="material-icons large blue-text">room</i>
+                        <p>Find out which Baseroom is occupied</p>
+                    </div>
+                </a>
+            </div>
+            <a href="#!">
+                <div class="col s12 m3">
+                    <div class="card-panel blue lighten-5">
+                        <i class="material-icons large blue-text">book</i>
+                        <p>Easily access course material</p>
+                    </div>
+            </a>
+        </div>
+        <a href="#!">
+            <div class="col s12 m3">
+                <div class="card-panel">
+                    <i class="material-icons large blue-text">notifications</i>
+                    <p>Be aware of University Notifications </p>
+                </div>
+            </div>
+        </a>
+        <a href="#!">
+            <div class="col s12 m3">
+                <div class="card-panel blue lighten-5">
+                    <i class="material-icons large blue-text">account_circle</i>
+                    <p>Access your Student's Portal</p>
+                </div>
+        </a>
+    </div>
+
+    </div>
+    </div>
+</section>
+<div class="fixed-action-btn horizontal">
+    <a class="btn-floating  btn-large right pulse waves-effect waves-light blue lighten-2">
+        <i class="
+        material-icons">notifications</i>
+    </a>
+    <ul>
+        <li>
+            <a class="btn-floating light-blue" onclick="">
+                <i class="material-icons aqua-text ">people</i>
+            </a>
+        </li>
+        <li>
+            <a class="btn-floating lime ">
+                <i class="material-icons aqua-text">book</i>
+            </a>
+        </li>
+        <li>
+            <a class="btn-floating red ">
+                <i class="material-icons aqua-text">room</i>
+            </a>
+        </li>
+        <li>
+            <a class="btn-floating orange ">
+                <i class="material-icons aqua-text">attach_file</i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Footer -->
+<section class="section section-footer center blue">
+    <div class="page-footer blue darken-4">
+        <div class="container blue darken-4">
+            <div class="row">
+                <p class="flow-text">Smart Campus &copy; 2019</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scripts -->
+<script src="js/jquery-minified.js"></script>
+<script src="js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems, options);
+    });</script>
+<script>
+    M.AutoInit();
+
+
+    //init slider
+    $('.slider').slider({
+        indicators: false,
+        height: 400,
+        transition: 500,
+        interval: 6000
+    });
+
+</script>
+</body>
+
+</html>

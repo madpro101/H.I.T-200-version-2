@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin Dasheboard</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/iconfont/material-icons.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <!-- style for sign up page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    .brand-logo {
+      margin-left: 0px !important;
+      padding-left: 0px !important;
+    }
+
+    nav .brand-logo {
+      left: -10%;
+    }
+  </style>
+</head>
+
+<body>
+    <nav class="blue darken-4">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">
+              <b>
+                <span>
+                  Smart Campus
+              </b>
+              </span>
+              <a href="#" class="sidenav-trigger right show-on-large" data-target="nav">
+                <i class="material-icons  transparent white-text right">menu</i>
+              </a>
+              <a href="#" data-activates="fixed-nav" class="button-collapse right">
+                <ul class="right hide-on-med-and-down">
+                  <li>
+                    <b>
+                      <a href="/admin_home">Home</a>
+                  </li>
+                  <li class="active">
+                    <a href="/admin_posts">Posts</a>
+                  </li>
+                  <!-- <li>
+                    <a href="/users">Classes</a>
+                  </li> -->
+                <li>
+                    <a href="/admin_blog">Blog</a>
+                </li>
+                <li>
+                    <a href="/Classrooms">Baseroom Occuption</a>
+                  </li> 
+                 
+                   <li>
+                    <a href="/admin_settings" class="waves-effect">Configurations</a>
+                  </li>
+                  <li> 
+                    <a href="/admin_logout" class="waves-effect">Logout</a>
+                  </li>
+                  
+    
+                </ul>
+    
+    
+    
+                <ul class="sidenav blue lighten-5  show-on-large right" id="nav">
+                  <ul id="slide-out" class="side-nav ">
+                    <li>
+                      <div class="user-view">
+                        <div class="background">
+                          <img src="img/background.jpg" alt="">
+                        </div>
+                        <a href="#">
+                          <img src="img/person1.jpg" alt="" class="circle">
+                        </a>
+                        <a href="#">
+                          <span class="name white-text">Adminstrator</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="/admin_home">
+                        <i class="material-icons">Home</i> Home</a>
+    
+                    </li>
+                    <li>
+                      <a href="/admin_home">Home</a>
+                    </li>
+                    <div class="divider"></div>
+                    <li>
+                      <a href="/users">Classes</a>
+                    </li>
+                    <div class="divider"></div>
+                    <li>
+                      <a href="#!">Posts</a>
+                    </li>
+                    <div class="divider"></div>
+                    <li>
+                      <a class="subheader">Account Controls</a>
+                    </li>
+                    <div class="divider"></div>
+                    <li>
+                    <li>
+                      <a href="/admin_settings" class="waves-effect">Configiration</a>
+                    </li>
+                    <li>
+                      <a href="/admin_logout" class="waves-effect">Logout</a>
+                    </li>
+                    <a href="/admin_login" class="waves-effect">Logout</a>
+                    </li>
+                  </ul>
+                </ul>
+              </a>
+          </div>
+      </nav>
+  <!-- Section: Stats -->
+  <!-- Section: Recent Posts & Todos -->
+  <section class="section section-recent">
+    <div class="row">
+      <div class="col s12 l8 m6">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Recent Posts</span>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Sender</th>
+                
+                  <th>Course</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tinashe Madivani</td>
+                 
+                  <td>Compiler Design</td>
+                  <td>Complier design Assignment 1 </td>
+                </tr>
+               <tr>
+                  <td>Tanaka Muchandibaya</td>
+                  
+                  <td>Graphics</td>
+                  <td>Graphics design Assignment 2 </td>
+                </tr>
+                <tr>
+                  <td>Tinashe Madivani</td>
+                 
+                  <td>Compiler Design</td>
+                  <td>Complier design Assignment 1 </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Semester Courselist</span>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Courses</th>
+                  <th>view course outline</th>
+                  <th></th>
+                 </tr>
+              </thead>
+              
+              <tbody> 
+                  <%courses.forEach(function(item){%>
+
+                    <tr>
+                      
+                      <td>Digital Signal Proccessing</td>
+                      <td><%=item%></td>
+                      
+                      <td>
+                        <a class="btn blue darken-2" href="/download/<%=item%>" id="radius">Download</a>
+                      </td>
+                    </tr>
+                    <%})%>
+        </tbody>
+            </table>
+          </div>
+       </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Stats -->
+  <!-- Section: Recent Posts & Todos -->
+  <section class="section section-recent">
+    <div class="row">
+      <div class="col s12 l8 m6">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Part/Classes Taken</span>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Part</th>
+                  <th>Course</th>
+                  <th>view class registers</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                    <%registers.forEach(function(item){%>
+
+                      <tr>
+                        
+                        <td>Digital Signal Proccessing</td>
+                        <td><%=item%></td>
+                        
+                        <td>
+                          <a class="btn blue darken-2" href="/download/<%=item%>" id="radius">Download</a>
+                        </td>
+                      </tr>
+                      <%})%>
+               
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title"> Assignments sent</span>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>DueDate</th>
+                  <th>Date sent</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <%assignments.forEach(function(item){%>
+
+                    <tr>
+                      
+                      <td>Digital Signal Proccessing</td>
+                      <td><%=item%></td>
+                      
+                      <td>
+                        <a class="btn blue darken-2" href="/download/<%=item%>" id="radius">Download</a>
+                      </td>
+                    </tr>
+                    <%})%>
+                
+              </tbody>
+            </table>
+          </div>
+       </div>
+      </div>
+    </section>
+  <!-- Footer -->
+  <section class="section section-footer center blue">
+    <div class="page-footer blue darken-4">
+      <div class="container blue darken-4">
+        <div class="row">
+          <p class="flow-text">Smart Campus &copy; 2019</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Scripts -->
+  <script src="js/jquery-2.1.1.js"></script>
+  <!-- <script src="js/typed.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/chart.js"></script> -->
+  <script src="js/canvasjs.min.js"></script>
+  <script>
+    M.AutoInit();
+  </script>
+  <script>
+    $(document).ready(function () {
+      M.AutoInit();
+      // Counter
+      $('.count').each(function () {
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+              $(this).text(Math.ceil(now));
+            }
+          });
+      });
+
+    });
+    // Comments - Approve & Deny
+    $('.approve').click(function (e) {
+      Materialize.toast('Comment Approved', 3000);
+      e.preventDefault();
+    });
+    $('.deny').click(function (e) {
+      Materialize.toast('Comment Denied', 3000);
+      e.preventDefault();
+    });
+
+    // Quick Todos
+    $('#todo-form').submit(function (e) {
+      const output = `<li class="collection-item">
+                <div>${$('#todo').val()}
+                  <a href="#!" class="secondary-content delete">
+                    <i class="material-icons">close</i>
+                  </a>
+                </div>
+              </li>`;
+
+      $('.todos').append(output);
+
+      Materialize.toast('Todo Added', 3000);
+
+      e.preventDefault();
+    });
+
+    // Delete Todos
+    $('.todos').on('click', '.delete', function (e) {
+      $(this).parent().parent().remove();
+      Materialize.toast('Todo Removed', 3000);
+
+      e.preventDefault();
+    });
+
+
+    window.onload = function () {
+
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        zoomEnabled: true,
+        title: {
+          text: "Try Zooming and Panning"
+        },
+        axisY: {
+          includeZero: false
+        },
+        data: data  // random generator below
+      });
+      chart.render();
+
+    }
+
+    var limit = 1000;
+
+    var y = 0;
+    var data = [];
+    var dataSeries = { type: "line" };
+    var dataPoints = [];
+    for (var i = 0; i < limit; i += 1) {
+      y += (Math.random() * 10 - 5);
+      dataPoints.push({
+        x: i - limit / 2,
+        y: y
+      });
+    }
+    dataSeries.dataPoints = dataPoints;
+    data.push(dataSeries);
+  </script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io()
+
+    socket.on('newreg', function(message) {
+      console.log(message)
+    })
+  </script>
+</body>
+
+</html>

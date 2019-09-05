@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart Campus</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/iconfont/material-icons.css">
+  <link rel="stylesheet" href="css/materialize.css">
+
+  <!-- style for sign up page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Campus Users</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <nav class="blue darken-3">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brandlogo">
+          <b>
+            <span>
+              Smart Admin DashBoard
+          </b>
+          </span>
+          <a href="#" class="sidenav-trigger right show-on-large" data-target="nav">
+            <i class="material-icons  transparent white-text right">menu</i>
+          </a>
+          <a href="#" data-activates="fixed-nav" class="button-collapse right">
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <b>
+                  <a href="dashboard.html">Dashboard</a>
+              </li>
+              <li>
+                <a href="posts.html">Posts</a>
+              </li>
+              <li class="active light">
+                <a href="users.html">Users</a>
+              </li>
+              <li>
+                <a href="settings.html" class="waves-effect">Settings</a>
+              </li>
+              <li>
+                <a href="login.html" class="waves-effect">Logout</a>
+              </li>
+              </b>
+            </ul>
+
+            <!-- Sidenav -->
+            <!-- <ul id="side-nav" class="side-nav">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="img/background.jpg" alt="">
+              </div>
+              <a href="#">
+                <img src="img/person1.jpg" alt="" class="circle">
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div> -->
+            <!-- Sidenav -->
+
+            <ul class="sidenav blue lighten-5  show-on-large right" id="nav">
+              <ul id="slide-out" class="side-nav ">
+                <li>
+                  <div class="user-view">
+                    <div class="background">
+                      <img src="img/background.jpg" alt="">
+                    </div>
+                    <a href="#">
+                      <img src="img/person1.jpg" alt="" class="circle">
+                    </a>
+                    <a href="#">
+                      <span class="name white-text">Admin</span>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <a href="dashboard.html">
+                    <i class="material-icons">dashboard</i> Dashboard</a>
+
+                </li>
+                <li>
+                  <a href="dashboard.html">Dashboard</a>
+                </li>
+                <div class="divider"></div>
+                <li>
+                  <a href="users.html">Users</a>
+                </li>
+                <div class="divider"></div>
+                <li>
+                  <a href="comments.html">Posts</a>
+                </li>
+                <div class="divider"></div>
+                <li>
+                  <a href="settings.html">Settings</a>
+                </li>
+                <div class="divider"></div>
+                <li>
+                  <li>
+                    <a href="">Logout</a>
+                  </li>
+                  <div class="divider"></div>
+                  <a class="subheader">Account Controls</a>
+                </li>
+                <div class="divider"></div>
+                <li>
+                  <a href="login.html" class="waves-effect">Logout</a>
+                </li>
+              </ul>
+            </ul>
+          </a>
+      </div>
+  </nav>
+  <!-- Section: Stats -->
+  <section class="section section-stats center">
+    <div class="row">
+      <div class="col s12 m6 l3">
+        <div class="card-panel blue lighten-1 white-text center">
+          <i class="material-icons medium">insert_emoticon</i>
+          <h5>Monthly Users</h5>
+          <h3 class="count">2000</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate white " style="width: 40%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel  center">
+          <i class="material-icons medium">mode_edit</i>
+          <h5>Blog Posts</h5>
+          <h3 class="count">130</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate blue lighten-1 " style="width: 60%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel blue lighten-1 white-text center">
+          <i class="material-icons medium">mode_comment</i>
+          <h5>Comments</h5>
+          <h3 class="count">3567</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate white " style="width: 30%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel  center">
+          <i class="material-icons medium">supervisor_account</i>
+          <h5>Users</h5>
+          <h3 class="count">2300</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate blue lighten-1 " style="width: 40%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="section section-footer center blue darken-3">
+    <div class="page-footer blue darken-3">
+      <div class="container">
+        <div class="row">
+          <p class="flow-text">Smart Campus &copy; 2018</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Scripts -->
+  <script src="js/jquery-minified.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      M.AutoInit();
+
+      // Counter
+      $('.count').each(function () {
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+        }, {
+            duration: 3000,
+            easing: 'swing',
+            step: function (now) {
+              $(this).text(Math.ceil(now));
+            }
+          });
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>

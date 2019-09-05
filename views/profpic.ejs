@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Smart Campus</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/iconfont/material-icons.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <!-- style for sign up page -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base Rooms</title>
+</head>
+
+<body>
+  <header class="main-headers">
+    <div class="navbar-fixed">
+      <nav class="blue darken-4 white-text">
+
+        <div class="container ">
+          <div class="nav-wrapper">
+            <a href="#Home" class="brand-logo deep-purple-text">
+              <b>
+                <span class="white-text ">Smart Campus
+              </b>
+              </span>
+
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Section: Posts -->
+  <section class="section section-posts grey lighten-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <h2>
+                <span>
+                  <b>Upload Profile Picture</b>
+                  <i class=" material-icons black-text">settings</i>
+                </span>
+              </h2>
+              <br>
+              <div>
+                <a href="#">
+                  <img  id="profpic" src="" alt="" class="circle">
+                </a>
+              </div>
+              <br>
+              <br>
+              <br>
+
+
+              <a href="/login" class="btn blue darken-1 right" id="radius4">Skip</a>
+
+              <form ref='profuploadForm' id='profuploadForm' action='http://localhost:8014/profupload' method='post'
+                encType="multipart/form-data">
+
+                <input type='submit' name="fname" value='Upload!' class="btn blue darken-1 right " id="radius1" />
+
+                <input type="file" name="sampleFile" class="grey" id="radius2"  accept="image/*" onChange="filev()"  />
+
+                <!-- <div style="display: inline-block; width: 100%;"> <input type='submit'
+                                  class="btn teal lighten-2" value='Send' /> -->
+              </form>
+              <br><br>
+            </div>
+          </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <section class="section section-footer center blue">
+    <div class="page-footer blue darken-4">
+      <div class="container blue darken-4">
+        <div class="row">
+          <p class="flow-text">Smart Campus &copy; 2019</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- scripts -->
+  <script src=" js/jquery-minified.js "></script>
+  <script src="js/materialize.min.js "></script>
+
+  <script>
+    function filev() {
+         var file = document.getElementById("radius2");
+         var file_name = file.value;
+         var extension = file_name.split('.').pop().toLowerCase();
+         var size      = file.files[0].size;
+         var allowedFormats = ["jpeg", "jpg", "png", "tif"];
+
+          if(!(allowedFormats.indexOf(extension) > -1)){
+           alert("Enter a jpg/jpeg/png/tif file");
+
+           document.getElementById("radius1").disabled = true;
+           return false;              
+          } else if( ((size/1024)/1024) > 15){
+             alert("Your file should be less than 15MB");
+             return false;
+          } else {
+            
+            document.getElementById("profpic").src=document.getElementById("radius2").value;
+           document.getElementById("radius1").disabled = false;   
+          }
+    }
+    </script>
+    
+
+  <!-- <script>function validate(file) {
+      var ext = file.split(".");
+      ext = ext[ext.length-1].toLowerCase();      
+      var arrayExtensions = ["jpg" , "jpeg", "png", "bmp", "gif"];
+  
+      if (arrayExtensions.lastIndexOf(ext) == -1) {
+          alert("Image required!");
+          this.value = ''
+          $("#radius").val("  ");
+      }
+
+     
+  }</script>
+   -->
+  <script>
+    M.AutoInit();
+
+    // JAVASCRIPT START HERE
+    $('#tabs-swipe-demo').tabs({
+      swipeable: true
+    });
+
+  </script>
+</body>
+<html>
+
+</html>
+
+</html>
