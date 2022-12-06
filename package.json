@@ -13,7 +13,7 @@
     "body-parser": "^1.18.3",
     "nodemon":"1.18.10",
         "ejs": "^2.6.1",
-    "express": "~4.11.2",
+    "express": "~4.17.3",
     "express-fileupload": "^1.1.1-alpha.3",
     "express-session": "^1.15.6",
     "folder-zip": "0.0.5",
